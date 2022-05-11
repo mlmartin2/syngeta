@@ -50,4 +50,4 @@ Exemplo:
 ## FAZER
  - [ ] Tornar get_cheapest_hotel compatível com argumentos numéricos
  - [ ] Testar funcionalidade no console
- - [ ] Consertar testes não funcionando quando imports não contém **src.** antes
+ - [X] Consertar testes não funcionando quando imports não contém **src.** antes

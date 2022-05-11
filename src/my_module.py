@@ -1,6 +1,6 @@
-from src.models.initHotels import hotels
+from models.initHotels import hotels
 from datetime import date
-from src.decoder.argdecoder import decode_defaultArgument
+from decoder.argdecoder import decode_defaultArgument
 
 def get_cheapest_hotel(default_argument):
     cheapest_hotel = ''
