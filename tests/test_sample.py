@@ -1,6 +1,7 @@
 from unittest import TestCase
 from context import src
 from src.my_module import get_cheapest_hotel
+from src.models import hotel
 
 class MyTest(TestCase):
     def test1(self):
@@ -14,4 +15,3 @@ class MyTest(TestCase):
     def test3(self):
         result = "Ridgewood"
         self.assertEqual(result, get_cheapest_hotel("Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)"))
-
