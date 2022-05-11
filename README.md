@@ -1,25 +1,53 @@
-Nearly empty Python3 project with a failing test!
-===
+# Syngeta - Desafio Técnico
 
-**DO NOT change the names of the function (get_cheapest_hotel) or of the file and folder it is in, changing it implies in disqualification.** 
+Software para analisar opções de hotéis com menor custo ou melhor custo-benefício dada as datas de estadia e dado o tipo de assinatura do usuário
 
-**Ensure that you have Python 3 installed and that your PIP installation points to it**
+## Classes
+hotel.py:
 
-To install the required modules:
+**Hotel**:
+classe para hotel, modelada a partir dos dados fornecidos para o desafio.
 
-```
-$ pip install -r requirements.txt
-```
-or
-```
-$ pip3 install -r requirements.txt
-```
+ - **name**: nome do hotel
+ - **classification**: classificação de qualidade do serviço
+ - **day_rates**: taxas de usuários Rewards/Regular, dependendo do
+ da semana (Fim de semana ou Dia de semana)
 
+## Funções
+argdecoder.py:
 
-To run the (failing) test:
+**decode_defaultArgument( default_argument: string ):**
+decodifica argumento padrão fornecido, retornando valores numéricos
+das informações relevantes (Tipo de assinatura, dias da semana marcados)
 
-```
-$ py.test
-```
+**slice_defaultArgument( default_argument: string):**
+prepara a string do argumento padrão para tratamento no codificador. Separa em
+array bidimensional de strings, com a primeira posição contendo o tipo de assinatura
+do usuário, e a segunda posição contendo array de datas marcadas
 
-**After implementing your solution, it should pass the unit tests available.** 
+**get_weekdayValue_fromString(str: string):**
+getter do valor numérico para dias da semana. A função recebe uma string
+no formato de data DDmonthYYYY(weekday), exemplo: 15Dec2012(mon)
+e retorna o valor, sendo 0 = Segunda-Feira -> ... -> 6 = Domingo
+
+## Formatos
+1. **Argumento padrão:**
+
+> `<Subscription>:<Date1>,<Date2>,<Date3>,...,<DateN>`
+
+   Exemplo:
+   
+
+> `Regular: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed)`
+
+2. **Data**
+
+> `DDmonthYYYY(weekday)`
+
+Exemplo:
+
+> `15Dec2012(mon)`
+## FAZER
+ - [ ] Tornar get_cheapest_hotel compatível com argumentos numéricos
+ - [ ] Testar funcionalidade no console
+ - [ ] Consertar testes não funcionando quando imports não contém **src.** antes
